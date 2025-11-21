@@ -16,15 +16,40 @@
 
 💙 Passionate about building high-performance Flutter apps with clean architecture and exceptional user experiences.
 
-📱 5+ years of experience developing cross-platform applications for **Android, iOS, Windows, macOS, and Web**.
+📱 **5+ years** of experience developing cross-platform applications for **Android, iOS, Windows, macOS, and Web**.
 
 🏗️ Specialized in scalable architectures, Firestore optimization, and custom UI frameworks that push Flutter's boundaries.
 
-🌍 Based in **UAE**, with experience working remotely with teams across the UK, Sweden, and the Middle East.
+🌍 Based in **UAE**, with experience working remotely with teams across **UK, Sweden, Egypt, and the Middle East**.
 
-🔧 Constantly exploring state management patterns, performance optimization, and contributing to open source.
+🎓 **B.Sc. Telecommunication Engineering** | Delta University for Science and Technology
 
-✨ When not coding, I'm probably optimizing database queries or writing Flutter packages!
+📜 Certified: **Stanford Algorithms** | **UC San Diego OOP in Java** | **Udacity Arab Coders**
+
+✨ Published **2 Flutter packages** on pub.dev and launched **8+ apps** on App Store & Google Play!
+
+---
+
+## 🚀 Impact & Achievements
+
+<div align="center">
+
+| 💰 Cost Savings | ⚡ Performance | 📈 Scale |
+|:---:|:---:|:---:|
+| **$497/year** saved | **99%** faster invoices | **3.5M AED** monthly transactions |
+| 829M Firestore reads eliminated | Custom desktop UI framework | 6 languages supported |
+
+</div>
+
+🔥 **Key Highlights:**
+
+- 💾 **Saved ~829 million Firestore reads/year** through re-architected invoice logic & hybrid caching
+- ⚡ **Improved invoice creation speed by 99%** with linked-list data structure optimization
+- 🖥️ **Built custom Flutter desktop UI framework** - floating windows, dialog stacks, multi-monitor support
+- 💳 **Integrated Stripe webhooks** ensuring 100% payment reliability during app interruptions
+- 👥 **Serving 10,000+ active users** on LinnStäd cleaning services app
+- 🌍 **Expanded "The Events" platform to 9 countries** across UAE & Arabian Gulf
+- 📦 **Published 2 Flutter packages** on pub.dev used by the developer community
 
 ---
 
@@ -32,14 +57,15 @@
 
 | Category | Technologies |
 |----------|-------------|
-| **Languages** | Dart, Java, Node.js |
+| **Languages** | Dart, Java, Node.js, Kotlin, Swift |
 | **Frameworks** | Flutter, Firebase |
 | **Platforms** | Android, iOS, Windows, macOS, Web |
 | **State Management** | Bloc, Cubit, Provider, GetX |
 | **Backend** | Firebase, Firestore, Cloud Functions |
 | **Databases** | Firestore, MySQL, Hive, Sqflite |
-| **Tools** | Git, Postman, Jira, Fastlane |
-| **CI/CD** | GitHub Actions, Firebase App Distribution |
+| **APIs** | REST, GraphQL, Stripe, Google Maps, WhatsApp API |
+| **Architecture** | Clean Architecture, SOLID, Design Patterns |
+| **CI/CD** | GitHub Actions, Fastlane, Firebase App Distribution |
 
 <div align="center">
   
@@ -48,8 +74,9 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 </div>
 
@@ -59,32 +86,58 @@
 
 | Package | Description |
 |---------|-------------|
-| [**scroll_highlight_text**](https://pub.dev/packages/scroll_highlight_text) | Highlight and scroll through text content in Latin and Arabic languages |
-| [**document_camera_frame**](https://pub.dev/packages/document_camera_frame) | Customizable camera interface for document scanning and capture |
+| [**scroll_highlight_text**](https://pub.dev/packages/scroll_highlight_text) | Highlight and scroll through text in Latin & Arabic with customizable styling |
+| [**document_camera_frame**](https://pub.dev/packages/document_camera_frame) | Document scanning camera interface - eliminated third-party SDK dependencies |
 
 ---
 
 ## 🏆 Featured Projects
 
-**🏢 BA3 Business Solution** - Cross-platform enterprise app (Android, iOS, Windows, macOS, Web) with advanced billing, financial management, and real-time sync. Optimized Firestore reads by ~829 million/year.
+**🏢 BA3 Business Solution** — *Cross-platform Enterprise App*
+> Android, iOS, Windows, macOS, Web | Handles **3.5M AED/month** in transactions
+> - Optimized Firestore reads by **829 million/year** (saving **$497/year**)
+> - Custom floating windows & multi-monitor desktop UI framework
+> - 6 language support with RTL | Role-based access control
 
-**🚗 RAK Rent** - Complete car rental ecosystem with Stripe integration, Google Maps, and custom document verification.
+**🚗 RAK Rent** — *Car Rental Ecosystem*
+> User & Provider Apps | Flutter + Firebase + Stripe
+> - Stripe Connected Accounts with **100% payment reliability**
+> - Custom document verification (proprietary Flutter package)
+> - Real-time booking with Google Maps integration
 
-**🌸 The Events** - Leading flowers and gifting platform in UAE, expanded to 9 countries.
+**🌸 The Events** — *Flowers & Gifting Platform*
+> Leading platform in UAE, expanded to **9 countries** in 3 years
 
-**💪 Gainz AI** - AI-powered fitness app with personalized training plans and real-time coaching.
+**💪 Gainz AI** — *AI Fitness App (UK Remote)*
+> Built search with text highlighting | Published scroll_highlight_text package
+> - *"Ahmed is a skilled Flutter developer with strong problem-solving abilities... a valuable asset to any team."* — Yousef Shams, Mobile Team Lead
+
+**🧹 LinnStäd** — *Cleaning Services App (Sweden Remote)*
+> Full lifecycle development | **10,000+ active users**
 
 ---
 
 ## 📊 GitHub Stats
 
 <div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ahmedzein-dev&show_icons=true&theme=tokyonight&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedzein-dev&layout=compact&theme=tokyonight&hide_border=true)
+<a href="https://github.com/ahmedzein-dev">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ahmedzein-dev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmedzein-dev&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
+</a>
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ahmedzein-dev&theme=tokyonight&hide_border=true)
+<br/>
+
+[![GitHub Streak](https://streak-stats.demolab.com/?user=ahmedzein-dev&theme=tokyonight&hide_border=true)](https://github.com/ahmedzein-dev)
+
+</div>
+
+<div align="center">
+
+| 🏆 Achievements | |
+|:---:|:---:|
+| ![Repos](https://img.shields.io/badge/Repositories-43-blue?style=for-the-badge) | ![Stars](https://img.shields.io/badge/Stars_Earned-17-yellow?style=for-the-badge) |
+| ![Contributions](https://img.shields.io/badge/2025_Contributions-653+-green?style=for-the-badge) | ![Apps](https://img.shields.io/badge/Apps_Launched-8+-purple?style=for-the-badge) |
 
 </div>
 
@@ -105,5 +158,7 @@
 <div align="center">
   
 ### 💬 *"Clean code always looks like it was written by someone who cares."*
+
+**Open to opportunities** 🚀
 
 </div>
