@@ -1,10 +1,13 @@
 <div align="center">
-  
-# Flutter
-  
-<img src="https://raw.githubusercontent.com/ahmedzein-dev/ahmedzein-dev/main/banner.png" alt="Flutter Developer Banner" width="600"/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=ahmedzein-dev&color=blue&style=flat-square)
+<!-- Animated Typing SVG -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B+I'm+Ahmed+Zein+Elabedin;Senior+Flutter+Developer+%7C+UAE;5%2B+Years+Building+Cross-Platform+Apps;Android+%E2%80%A2+iOS+%E2%80%A2+Web+%E2%80%A2+Desktop;Welcome+to+my+GitHub!" alt="Typing SVG" />
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/74038190/241765440-80728820-e06b-4f96-9c9e-9df46f0cc0a5.gif" alt="Mobile Developer" width="500"/>
+
+![Profile Views](https://komarev.com/ghpvc/?username=ahmedzein-dev&style=flat&color=orange&label=PROFILE+VIEWS)
 
 </div>
 
@@ -67,16 +70,18 @@
 | **Architecture** | Clean Architecture, SOLID, Design Patterns |
 | **CI/CD** | GitHub Actions, Fastlane, Firebase App Distribution |
 
+<br>
 <div align="center">
-  
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
-![Google Maps](https://img.shields.io/badge/Google_Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+<img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white"/>
+<img src="https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white"/>
+<img src="https://img.shields.io/badge/Firebase-ffca28?style=flat&logo=firebase&logoColor=black"/>
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white"/>
+<img src="https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white"/>
+<img src="https://img.shields.io/badge/Stripe-008CDD?style=flat&logo=stripe&logoColor=white"/>
+<img src="https://img.shields.io/badge/Google_Maps-4285F4?style=flat&logo=google-maps&logoColor=white"/>
+<img src="https://img.shields.io/badge/GIT-E44C30?style=flat&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white"/>
 
 </div>
 
