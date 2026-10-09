@@ -178,7 +178,7 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmedzeinelabedein/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-zein-294230270)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmed.zein1896@gmail.com)
 [![Website](https://img.shields.io/badge/Website-ahmedzein.dev-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ahmedzein.dev)
 [![pub.dev](https://img.shields.io/badge/pub.dev-ahmedzein.dev-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://pub.dev/publishers/ahmedzein.dev/packages)
