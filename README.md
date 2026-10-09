@@ -29,7 +29,7 @@
 
 📜 Certified: **Stanford Algorithms** | **UC San Diego OOP in Java** | **Udacity Arab Coders**
 
-✨ Published **2 Flutter packages** on pub.dev and launched **8+ apps** on App Store & Google Play!
+✨ Published **3 Flutter packages** on pub.dev and launched **15+ apps** on App Store & Google Play!
 
 ---
 
@@ -48,11 +48,11 @@
 
 - 💾 **Saved ~829 million Firestore reads/year** through re-architected invoice logic & hybrid caching
 - ⚡ **Improved invoice creation speed by 99%** with linked-list data structure optimization
-- 🖥️ **Built custom Flutter desktop UI framework** - floating windows, dialog stacks, multi-monitor support
+- 🖥️ **Built a custom Flutter desktop windowing layer** - floating windows, priority stacking, dialog stacks and focus management, now open source as [draggable_floating_window](https://pub.dev/packages/draggable_floating_window)
 - 💳 **Integrated Stripe webhooks** ensuring 100% payment reliability during app interruptions
 - 👥 **Serving 10,000+ active users** on LinnStäd cleaning services app
 - 🌍 **Expanded "The Events" platform to 9 countries** across UAE & Arabian Gulf
-- 📦 **Published 2 Flutter packages** on pub.dev used by the developer community
+- 📦 **Published 3 Flutter packages** on pub.dev used by the developer community
 
 ---
 
@@ -91,6 +91,7 @@
 
 | Package | Description |
 |---------|-------------|
+| [**draggable_floating_window**](https://pub.dev/packages/draggable_floating_window) | Draggable, resizable floating windows inside a Flutter app, with priority stacking, per-window dialog stacks and keyboard focus |
 | [**scroll_highlight_text**](https://pub.dev/packages/scroll_highlight_text) | Highlight and scroll through text in Latin & Arabic with customizable styling |
 | [**document_camera_frame**](https://pub.dev/packages/document_camera_frame) | Document scanning camera interface - eliminated third-party SDK dependencies |
 
@@ -101,7 +102,7 @@
 **🏢 BA3 Business Solution** — *Cross-platform Enterprise App*
 > Android, iOS, Windows, macOS, Web | Handles **3.5M AED/month** in transactions
 > - Optimized Firestore reads by **829 million/year** (saving **$497/year**)
-> - Custom floating windows & multi-monitor desktop UI framework
+> - Custom floating-windows framework for desktop, now open source as [draggable_floating_window](https://pub.dev/packages/draggable_floating_window)
 > - 6 language support with RTL | Role-based access control
 
 **🚗 RAK Rent** — *Car Rental Ecosystem*
