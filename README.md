@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing SVG -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hi,+I'm+Ahmed+Zein+Elabedin;Senior+Flutter+Engineer+%7C+UAE;Real-Time+%E2%80%A2+Background+Execution+%E2%80%A2+Voice+AI;Android+%E2%80%A2+iOS+%E2%80%A2+Web+%E2%80%A2+Desktop;Open-Source+Package+Author" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hi,+I'm+Ahmed+Zein+Elabedin;Senior+Software+Engineer+%7C+UAE;Real-Time+%E2%80%A2+Background+Execution+%E2%80%A2+Voice+AI;Android+%E2%80%A2+iOS+%E2%80%A2+Web+%E2%80%A2+Desktop;Open-Source+Package+Author" alt="Typing SVG" />
 
 <br>
 
@@ -15,7 +15,7 @@
 
 ## About Me
 
-**Senior Flutter Engineer** at **Kief Consultancy & Technology**, Abu Dhabi. Lead mobile engineer on **Taggo**, **Taggo Captain** and **The Events**.
+**Senior Software Engineer** at **Kief Consultancy & Technology**, Abu Dhabi. Lead mobile engineer on **Taggo**, **Taggo Captain** and **The Events**.
 
 I go deep where most Flutter work stops: real-time WebSocket systems, three-isolate background execution, iOS Live Activities & Dynamic Island, and custom platform channels in Kotlin and Swift.
 
@@ -44,7 +44,7 @@ Launched **15+ apps** on the App Store & Google Play!
 | 💵 Cost Savings | ⏱️ Performance | 📈 Scale |
 |:---:|:---:|:---:|
 | **$497/year** saved | **99%** faster invoice creation | **3.5M AED** monthly transactions |
-| **829M** Firestore reads/year eliminated | App launch **~12 s → ~3 s** | **100+** likes on pub.dev |
+| **829M** Firestore reads/year eliminated | App launch **~12 s → ~3 s** | **~100** likes on pub.dev |
 
 </div>
 
@@ -60,8 +60,7 @@ Launched **15+ apps** on the App Store & Google Play!
 - **Built a custom Flutter desktop windowing layer** - floating windows, priority stacking, dialog stacks and focus management, now open source as [draggable_floating_window](https://pub.dev/packages/draggable_floating_window)
 - **Cut The Events app launch time from ~12 s to ~3 s** on the same device
 - **Built payments on Stripe**: a wallet with 3D Secure, Apple Pay and Google Pay, and Connected Accounts with webhooks for provider payouts
-- **100+ likes across my 3 pub.dev packages**, all at 160/160 pub points; document_camera_frame gets ~600 downloads a month
-- **Published 3 Flutter packages** on pub.dev; document_camera_frame runs in production in Taggo Captain
+- **3 Flutter packages on pub.dev** with ~100 likes, all at 160/160 pub points; document_camera_frame runs in production in Taggo Captain and gets ~600 downloads a month
 
 ---
 
@@ -135,14 +134,14 @@ Launched **15+ apps** on the App Store & Google Play!
 > - Continuous background location on a three-isolate architecture
 > - Driver onboarding with on-device document scanning, using my open-source [document_camera_frame](https://pub.dev/packages/document_camera_frame) in production
 
-**BA3 Business Solution** — *Cross-platform enterprise accounting app*
+**BA3 Business Solutions** — *Cross-platform enterprise accounting app*
 > Android, iOS, Windows, macOS, Web | Handles **3.5M AED/month** in transactions
 > - Optimized Firestore reads by **829 million/year** (saving **$497/year**), with invoice creation **99%** faster
 > - Custom floating-windows framework for desktop, now open source as [draggable_floating_window](https://pub.dev/packages/draggable_floating_window)
 > - 6 languages with RTL | Role-based access control
 
 **The Events** — *Multi-vendor marketplace for gifts, events & shopping* · [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/ae/app/theevents-gifts-shopping/id6739205204) [![Google Play](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.logicalyinfotech.events)
-> Leading online flowers and gifting company in the UAE, expanded to **9 countries** in 3 years
+> A UAE marketplace that expanded to **9 countries** in 3 years
 > - Modernised the Flutter codebase, with Telr, Apple Pay and Google Pay payments, PDF and printing
 > - Cut app launch time from ~12 s to ~3 s
 
