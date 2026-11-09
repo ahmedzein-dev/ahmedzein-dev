@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Typing SVG -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=900&lines=Hi,+I'm+Ahmed+Zein+Elabedin;Senior+Software+Engineer+%C2%B7+Mobile+(Flutter,+iOS+%26+Android);Real-Time+%E2%80%A2+Background+Execution+%E2%80%A2+Voice+AI;Android+%E2%80%A2+iOS+%E2%80%A2+Web+%E2%80%A2+Desktop;Open-Source+Package+Author" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=900&lines=Hi,+I'm+Ahmed+Zein+Elabedin;Senior+Software+Engineer+%C2%B7+Flutter+(iOS,+Android+%26+Desktop);Real-Time+%E2%80%A2+Background+Execution+%E2%80%A2+Voice+AI;Android+%E2%80%A2+iOS+%E2%80%A2+Web+%E2%80%A2+Desktop;Open-Source+Package+Author" alt="Typing SVG" />
 
 <br>
 
@@ -15,7 +15,7 @@
 
 ## About Me
 
-**Senior Software Engineer · Mobile (Flutter, iOS & Android)** at **Kief Consultancy & Technology**, Abu Dhabi. Lead mobile engineer on **Taggo**, **Taggo Captain** and **The Events**.
+**Senior Software Engineer · Flutter (iOS, Android & Desktop)** at **Kief Consultancy & Technology**, Abu Dhabi. Lead mobile engineer on **Taggo**, **Taggo Captain** and **The Events**.
 
 I go deep where most Flutter work stops: real-time WebSocket systems, three-isolate background execution, iOS Live Activities & Dynamic Island, and custom platform channels in Kotlin and Swift.
 
