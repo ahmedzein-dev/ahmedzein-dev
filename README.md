@@ -122,14 +122,14 @@ Launched **15+ apps** on the App Store & Google Play!
 
 ## Featured Projects
 
-**Taggo** — *Multi-service mobility platform for the UAE* · [App Store](https://apps.apple.com/ae/app/taggo-ride-cargo/id6756260610) · [Google Play](https://play.google.com/store/apps/details?id=ae.kief.taggo)
+**Taggo** — *Multi-service mobility platform for the UAE* · [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/ae/app/taggo-ride-cargo/id6756260610) [![Google Play](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=ae.kief.taggo)
 > iOS & Android | Ride-hailing, cargo delivery and vehicle recovery, live on both stores
 > - Real-time driver tracking over Socket.IO
 > - iOS Live Activities & Dynamic Island for live trip status
 > - **Taggo Buddy**: a voice assistant on the Gemini Live API that books rides through streamed conversation
 > - In-app wallet on Stripe with Apple Pay, Google Pay and 3D Secure
 
-**Taggo Captain** — *Driver app for the Taggo platform* · [App Store](https://apps.apple.com/ae/app/taggo-captain/id6784939884) · [Google Play](https://play.google.com/store/apps/details?id=ae.kief.taggodriver.taggo_driver)
+**Taggo Captain** — *Driver app for the Taggo platform* · [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/ae/app/taggo-captain/id6784939884) [![Google Play](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=ae.kief.taggodriver.taggo_driver)
 > iOS & Android | Live on both stores
 > - Real-time ride offers over WebSockets, with background alerts on Android and iOS
 > - Continuous background location on a three-isolate architecture
@@ -141,12 +141,12 @@ Launched **15+ apps** on the App Store & Google Play!
 > - Custom floating-windows framework for desktop, now open source as [draggable_floating_window](https://pub.dev/packages/draggable_floating_window)
 > - 6 languages with RTL | Role-based access control
 
-**The Events** — *Multi-vendor marketplace for gifts, events & shopping* · [App Store](https://apps.apple.com/ae/app/theevents-gifts-shopping/id6739205204) · [Google Play](https://play.google.com/store/apps/details?id=com.logicalyinfotech.events)
+**The Events** — *Multi-vendor marketplace for gifts, events & shopping* · [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/ae/app/theevents-gifts-shopping/id6739205204) [![Google Play](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.logicalyinfotech.events)
 > Leading online flowers and gifting company in the UAE, expanded to **9 countries** in 3 years
 > - Modernised the Flutter codebase, with Telr, Apple Pay and Google Pay payments, PDF and printing
 > - Cut app launch time from ~12 s to ~3 s
 
-**Gainz AI** — *AI fitness app (UK, remote)* · [App Store](https://apps.apple.com/us/app/gainz-ai-chat-train-track/id6474649083) · [Google Play](https://play.google.com/store/apps/details?id=ai.gainz.app)
+**Gainz AI** — *AI fitness app (UK, remote)* · [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/us/app/gainz-ai-chat-train-track/id6474649083) [![Google Play](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=ai.gainz.app)
 > - Notes search with matched-text highlighting and scroll-to-match navigation, published as [scroll_highlight_text](https://pub.dev/packages/scroll_highlight_text)
 > - On-device summarisation and translation
 > - *"Ahmed is a skilled Flutter developer with strong problem-solving abilities... a valuable asset to any team."* — Yousef Shams, Mobile Team Lead
