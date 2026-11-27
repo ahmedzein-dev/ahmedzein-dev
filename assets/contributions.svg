@@ -1,36 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="300" viewBox="0 0 495 300" role="img" aria-label="Contribution breakdown">
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="324" viewBox="0 0 495 324" role="img" aria-label="Contribution breakdown">
 <style>text{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}</style>
-<rect width="495" height="300" rx="4.5" fill="#1a1b27"/>
+<rect width="495" height="324" rx="4.5" fill="#1a1b27"/>
 <text x="25" y="38" font-size="18" fill="#70a5fd">Contributions in the last year</text>
-<text x="470" y="40" font-size="22" font-weight="700" fill="#70a5fd" text-anchor="end">1,037</text>
+<text x="470" y="40" font-size="22" font-weight="700" fill="#70a5fd" text-anchor="end">1,038</text>
 <rect x="25" y="70" width="445" height="10" rx="5" fill="#2f3449"/>
 <clipPath id="bar"><rect x="25" y="70" width="445" height="10" rx="5"/></clipPath>
 <g clip-path="url(#bar)">
-<rect x="25.00" y="70" width="326.99" height="10" fill="#bf91f3"/>
-<rect x="351.99" y="70" width="116.29" height="10" fill="#38bdae"/>
-<rect x="468.28" y="70" width="2.00" height="10" fill="#e0af68"/>
+<rect x="25.00" y="70" width="116.61" height="10" fill="#38bdae"/>
+<rect x="141.61" y="70" width="3.00" height="10" fill="#e0af68"/>
+<rect x="144.61" y="70" width="325.39" height="10" fill="#565f89"/>
 </g>
 <text x="360" y="104" font-size="11" fill="#a9b1d6" text-anchor="end">Last year</text>
 <text x="470" y="104" font-size="11" fill="#a9b1d6" text-anchor="end">Since Mar 2021</text>
-<rect x="25" y="126" width="10" height="10" rx="2" fill="#bf91f3"/>
-<text x="43" y="136" font-size="14" fill="#38bdae">Private contributions</text>
-<text x="360" y="136" font-size="14" fill="#38bdae" text-anchor="end">762</text>
-<text x="470" y="136" font-size="14" fill="#38bdae" text-anchor="end">1,564</text>
-<rect x="25" y="150" width="10" height="10" rx="2" fill="#38bdae"/>
-<text x="43" y="160" font-size="14" fill="#38bdae">Commits to public repos</text>
-<text x="360" y="160" font-size="14" fill="#38bdae" text-anchor="end">271</text>
-<text x="470" y="160" font-size="14" fill="#38bdae" text-anchor="end">717</text>
-<rect x="25" y="174" width="10" height="10" rx="2" fill="#e0af68"/>
-<text x="43" y="184" font-size="14" fill="#38bdae">Other (pull requests, new repos)</text>
-<text x="360" y="184" font-size="14" fill="#38bdae" text-anchor="end">4</text>
-<text x="470" y="184" font-size="14" fill="#38bdae" text-anchor="end">31</text>
+<rect x="25" y="126" width="10" height="10" rx="2" fill="#38bdae"/>
+<text x="43" y="136" font-size="14" fill="#38bdae">Commits to public repos</text>
+<text x="360" y="136" font-size="14" fill="#38bdae" text-anchor="end">272</text>
+<text x="470" y="136" font-size="14" fill="#38bdae" text-anchor="end">718</text>
+<rect x="25" y="150" width="10" height="10" rx="2" fill="#e0af68"/>
+<text x="43" y="160" font-size="14" fill="#38bdae">Other (pull requests, new repos)</text>
+<text x="360" y="160" font-size="14" fill="#38bdae" text-anchor="end">7</text>
+<text x="470" y="160" font-size="14" fill="#38bdae" text-anchor="end">112</text>
+<rect x="25" y="174" width="10" height="10" rx="2" fill="#565f89"/>
+<text x="43" y="184" font-size="14" fill="#38bdae">Private, type not shared</text>
+<text x="360" y="184" font-size="14" fill="#38bdae" text-anchor="end">759</text>
+<text x="470" y="184" font-size="14" fill="#38bdae" text-anchor="end">1,483</text>
 <line x1="25" y1="194" x2="470" y2="194" stroke="#2f3449"/>
 <text x="43" y="214" font-size="14" font-weight="700" fill="#70a5fd">Total</text>
-<text x="360" y="214" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">1,037</text>
-<text x="470" y="214" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">2,312</text>
-<line x1="25" y1="232" x2="470" y2="232" stroke="#2f3449"/>
-<text x="25" y="258" font-size="14" font-weight="700" fill="#70a5fd">Repositories I own</text>
-<text x="360" y="258" font-size="14" fill="#38bdae" text-anchor="end">25 public · 25 private</text>
-<text x="470" y="258" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">50</text>
-<text x="25" y="286" font-size="10" fill="#a9b1d6">GitHub counts private work as one number, without its type. Updated 27 Nov 2026.</text>
+<text x="360" y="214" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">1,038</text>
+<text x="470" y="214" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">2,313</text>
+<text x="43" y="238" font-size="14" font-weight="700" fill="#70a5fd">All commits (private + public)</text>
+<text x="360" y="238" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">272</text>
+<text x="470" y="238" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">718</text>
+<line x1="25" y1="256" x2="470" y2="256" stroke="#2f3449"/>
+<text x="25" y="282" font-size="14" font-weight="700" fill="#70a5fd">Repositories I own</text>
+<text x="360" y="282" font-size="14" fill="#38bdae" text-anchor="end">25 public · 25 private</text>
+<text x="470" y="282" font-size="14" font-weight="700" fill="#70a5fd" text-anchor="end">50</text>
+<text x="25" y="310" font-size="10" fill="#a9b1d6">Private commits are read with my own read-only token. Updated 27 Nov 2026.</text>
 </svg>
