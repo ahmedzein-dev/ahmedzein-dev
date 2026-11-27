@@ -165,6 +165,10 @@ Launched **15+ apps** on the App Store & Google Play!
 
 [![GitHub Streak](https://streak-stats.demolab.com/?user=ahmedzein-dev&theme=tokyonight&hide_border=true)](https://github.com/ahmedzein-dev)
 
+<br/>
+
+<img src="assets/contributions.svg" alt="Where my contributions come from: private contributions, commits to public repos, pull requests and repositories created, for the last year and since 2021"/>
+
 </div>
 
 <div align="center">

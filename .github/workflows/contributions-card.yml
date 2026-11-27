@@ -1,0 +1,38 @@
+name: Contributions card
+
+# Redraws assets/contributions.svg once a day so the numbers stay current.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Draw the card
+        run: python3 scripts/contributions_card.py ahmedzein-dev assets/contributions.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional read-only token of ahmedzein-dev, only used to count
+          # private repositories. Without it the card shows public repos only.
+          CARD_TOKEN: ${{ secrets.CARD_TOKEN }}
+
+      - name: Commit if the numbers changed
+        run: |
+          # Ignore the "Updated <date>" line, so the card is only committed
+          # when a number changes.
+          if git diff -U0 -- assets/contributions.svg | grep '^[+-][^+-]' | grep -qv 'Updated '; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/contributions.svg
+            git commit -m "Update contributions card"
+            git push
+          else
+            git checkout -- assets/contributions.svg
+          fi
