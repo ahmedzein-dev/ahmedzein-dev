@@ -270,10 +270,14 @@ def main():
     owner_ly = owner_at = None
     if owner_token:
         owner_ly, owner_at, _ = fetch_contributions(login, owner_token)
-        # Only use the owner view if it actually types some private work.
-        if owner_ly["restrictedContributionsCount"] >= public_ly["restrictedContributionsCount"] and \
-                owner_at["restrictedContributionsCount"] >= public_at["restrictedContributionsCount"]:
-            print("CARD_TOKEN sees no more than the public view; showing private work as one number.")
+        # Only use the owner view if it reveals private commits. A token with
+        # Metadata access alone sees private repos but not their commits,
+        # and an "all commits" total would then be only the public ones.
+        if owner_at["totalCommitContributions"] <= public_at["totalCommitContributions"]:
+            print(
+                "CARD_TOKEN can't see private commits (it needs Contents: read-only); "
+                "showing private work as one number."
+            )
             owner_ly = owner_at = None
 
     last_year = combine(public_ly, owner_ly)
