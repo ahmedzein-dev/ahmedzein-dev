@@ -42,10 +42,19 @@ MUTED = "#a9b1d6"
 LINE = "#2f3449"
 
 # (key, label, colour). "other" gathers everything small: pull requests,
-# new repositories, issues, reviews and anything GitHub gives no type.
-ROWS = [
-    ("private", "Private contributions", "#bf91f3"),
-    ("commits", "Commits to public repos", "#38bdae"),
+# new repositories, issues and reviews. Rows that are zero in both columns
+# are left out.
+ROWS_WITH_PRIVATE_COMMITS = [
+    ("private_commits", "Commits to private repos", "#bf91f3"),
+    ("public_commits", "Commits to public repos", "#38bdae"),
+    ("other", "Other (pull requests, new repos)", "#e0af68"),
+    ("unknown", "Private, type not shared", "#565f89"),
+]
+# Used when no token of the account is available, so GitHub reports all
+# private work as one untyped number.
+ROWS_PUBLIC_VIEW = [
+    ("unknown", "Private contributions", "#bf91f3"),
+    ("public_commits", "Commits to public repos", "#38bdae"),
     ("other", "Other (pull requests, new repos)", "#e0af68"),
 ]
 
@@ -64,15 +73,39 @@ def graphql(query, token):
 
 
 def flatten(c):
-    calendar = c["contributionCalendar"]["totalContributions"]
-    private = c["restrictedContributionsCount"]
-    commits = c["totalCommitContributions"]
+    out = {k: c[k] for k in TYPED}
+    out["calendar"] = c["contributionCalendar"]["totalContributions"]
+    return out
+
+
+def combine(public, owner):
+    """Splits one period's total into the card's rows.
+
+    public: numbers as anyone sees them. owner: the same numbers read with
+    the account's own token, where GitHub types private work too (or None).
+    """
+    calendar = public["calendar"]
+    public_commits = public["totalCommitContributions"]
+    if owner is None:
+        unknown = public["restrictedContributionsCount"]
+        return {
+            "calendar": calendar,
+            "unknown": unknown,
+            "public_commits": public_commits,
+            "private_commits": 0,
+            "all_commits": None,
+            "other": max(0, calendar - unknown - public_commits),
+        }
+    all_commits = owner["totalCommitContributions"]
+    unknown = owner["restrictedContributionsCount"]
+    private_commits = max(0, all_commits - public_commits)
     return {
         "calendar": calendar,
-        "private": private,
-        "commits": commits,
-        # Whatever the calendar counts beyond private work and public commits.
-        "other": max(0, calendar - private - commits),
+        "unknown": unknown,
+        "public_commits": public_commits,
+        "private_commits": private_commits,
+        "all_commits": all_commits,
+        "other": max(0, calendar - unknown - public_commits - private_commits),
     }
 
 
@@ -98,6 +131,15 @@ def fetch_contributions(login, token):
     return last_year, all_time, since
 
 
+def owner_login(owner_token):
+    """The login a token belongs to, or None if it can't be read."""
+    try:
+        return graphql("query { viewer { login } }", owner_token)["viewer"]["login"]
+    except (RuntimeError, urllib.error.HTTPError) as e:
+        print(f"CARD_TOKEN could not be used ({e}).")
+        return None
+
+
 def fetch_repos(login, public_token, owner_token):
     """Returns (public, private). private is None when it can't be known."""
     q = (
@@ -109,15 +151,12 @@ def fetch_repos(login, public_token, owner_token):
         return public, None
     try:
         data = graphql(
-            "query { viewer { login "
+            "query { viewer { "
             "repositories(ownerAffiliations: OWNER, privacy: PRIVATE) { totalCount } } }",
             owner_token,
         )["viewer"]
     except (RuntimeError, urllib.error.HTTPError) as e:
         print(f"CARD_TOKEN could not read private repositories ({e}); showing public only.")
-        return public, None
-    if data["login"].lower() != login.lower():
-        print(f"CARD_TOKEN belongs to {data['login']}, not {login}; showing public only.")
         return public, None
     return public, data["repositories"]["totalCount"]
 
@@ -126,13 +165,23 @@ def n(v):
     return f"{v:,}"
 
 
-def render(last_year, all_time, since, repos):
+def render(rows, last_year, all_time, since, repos):
+    rows = [r for r in rows if last_year[r[0]] or all_time[r[0]]]
+    show_all_commits = last_year["all_commits"] is not None
     width, pad = 495, 25
     bar_y = 70
     table_y = 112
     row_h = 24
-    height = table_y + row_h * (len(ROWS) + 1) + 92
+    height = table_y + row_h * (len(rows) + 1) + 92 + (row_h if show_all_commits else 0)
     col_a, col_b = width - pad - 110, width - pad
+
+    def row_values(y, label, key, bold=False, colour=TEXT, indent=18):
+        weight = ' font-weight="700"' if bold else ""
+        return [
+            f'<text x="{pad + indent}" y="{y}" font-size="14"{weight} fill="{colour}">{label}</text>',
+            f'<text x="{col_a}" y="{y}" font-size="14"{weight} fill="{colour}" text-anchor="end">{n(last_year[key])}</text>',
+            f'<text x="{col_b}" y="{y}" font-size="14"{weight} fill="{colour}" text-anchor="end">{n(all_time[key])}</text>',
+        ]
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
@@ -150,7 +199,7 @@ def render(last_year, all_time, since, repos):
     out.append(f'<clipPath id="bar"><rect x="{pad}" y="{bar_y}" width="{bar_w}" height="10" rx="5"/></clipPath>')
     out.append('<g clip-path="url(#bar)">')
     x, total = pad, max(last_year["calendar"], 1)
-    for key, _, colour in ROWS:
+    for key, _, colour in rows:
         w = bar_w * last_year[key] / total
         if w > 0:
             out.append(f'<rect x="{x:.2f}" y="{bar_y}" width="{max(w, 2):.2f}" height="10" fill="{colour}"/>')
@@ -164,19 +213,18 @@ def render(last_year, all_time, since, repos):
         f"Since {since:%b %Y}</text>"
     )
     y = table_y
-    for key, label, colour in ROWS:
+    for key, label, colour in rows:
         y += row_h
         out.append(f'<rect x="{pad}" y="{y - 10}" width="10" height="10" rx="2" fill="{colour}"/>')
-        out.append(f'<text x="{pad + 18}" y="{y}" font-size="14" fill="{TEXT}">{label}</text>')
-        out.append(f'<text x="{col_a}" y="{y}" font-size="14" fill="{TEXT}" text-anchor="end">{n(last_year[key])}</text>')
-        out.append(f'<text x="{col_b}" y="{y}" font-size="14" fill="{TEXT}" text-anchor="end">{n(all_time[key])}</text>')
+        out.extend(row_values(y, label, key))
 
     y += 10
     out.append(f'<line x1="{pad}" y1="{y}" x2="{width - pad}" y2="{y}" stroke="{LINE}"/>')
     y += row_h - 4
-    out.append(f'<text x="{pad + 18}" y="{y}" font-size="14" font-weight="700" fill="{TITLE}">Total</text>')
-    out.append(f'<text x="{col_a}" y="{y}" font-size="14" font-weight="700" fill="{TITLE}" text-anchor="end">{n(last_year["calendar"])}</text>')
-    out.append(f'<text x="{col_b}" y="{y}" font-size="14" font-weight="700" fill="{TITLE}" text-anchor="end">{n(all_time["calendar"])}</text>')
+    out.extend(row_values(y, "Total", "calendar", bold=True, colour=TITLE))
+    if show_all_commits:
+        y += row_h
+        out.extend(row_values(y, "All commits (private + public)", "all_commits", bold=True, colour=TITLE))
 
     # Repositories owned right now.
     public, private = repos
@@ -190,10 +238,14 @@ def render(last_year, all_time, since, repos):
     out.append(f'<text x="{col_b}" y="{y}" font-size="14" font-weight="700" fill="{TITLE}" text-anchor="end">{n(owned)}</text>')
 
     updated = datetime.now(timezone.utc)
+    note = (
+        "Private commits are read with my own read-only token."
+        if show_all_commits
+        else "GitHub counts private work as one number, without its type."
+    )
     out.append(
         f'<text x="{pad}" y="{height - 14}" font-size="10" fill="{MUTED}">'
-        "GitHub counts private work as one number, without its type. "
-        f"Updated {updated:%d %b %Y}.</text>"
+        f"{note} Updated {updated:%d %b %Y}.</text>"
     )
     out.append("</svg>")
     return "\n".join(out) + "\n"
@@ -207,13 +259,34 @@ def main():
     if not token:
         raise SystemExit("Set GITHUB_TOKEN or GH_TOKEN.")
     owner_token = os.environ.get("CARD_TOKEN") or None
-    last_year, all_time, since = fetch_contributions(login, token)
+    if owner_token:
+        who = owner_login(owner_token)
+        if who is None or who.lower() != login.lower():
+            if who is not None:
+                print(f"CARD_TOKEN belongs to {who}, not {login}; ignoring it.")
+            owner_token = None
+
+    public_ly, public_at, since = fetch_contributions(login, token)
+    owner_ly = owner_at = None
+    if owner_token:
+        owner_ly, owner_at, _ = fetch_contributions(login, owner_token)
+        # Only use the owner view if it actually types some private work.
+        if owner_ly["restrictedContributionsCount"] >= public_ly["restrictedContributionsCount"] and \
+                owner_at["restrictedContributionsCount"] >= public_at["restrictedContributionsCount"]:
+            print("CARD_TOKEN sees no more than the public view; showing private work as one number.")
+            owner_ly = owner_at = None
+
+    last_year = combine(public_ly, owner_ly)
+    all_time = combine(public_at, owner_at)
+    rows = ROWS_PUBLIC_VIEW if owner_ly is None else ROWS_WITH_PRIVATE_COMMITS
     repos = fetch_repos(login, token, owner_token)
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w") as f:
-        f.write(render(last_year, all_time, since, repos))
+        f.write(render(rows, last_year, all_time, since, repos))
     print(
-        f"last year {last_year['calendar']:,}, all time {all_time['calendar']:,}, "
+        f"last year {last_year['calendar']:,} (all commits {last_year['all_commits']}), "
+        f"all time {all_time['calendar']:,} (all commits {all_time['all_commits']}), "
+        f"untyped private {last_year['unknown']:,}/{all_time['unknown']:,}, "
         f"repos {repos[0]} public / {repos[1] if repos[1] is not None else '?'} private -> {path}"
     )
 
