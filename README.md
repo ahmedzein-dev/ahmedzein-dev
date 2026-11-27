@@ -169,6 +169,9 @@ Launched **15+ apps** on the App Store & Google Play!
 
 <img src="assets/contributions.svg" alt="Where my contributions come from: private contributions, commits to public repos, pull requests and repositories created, for the last year and since 2021"/>
 
+<br/>
+<br/>
+
 </div>
 
 <div align="center">
